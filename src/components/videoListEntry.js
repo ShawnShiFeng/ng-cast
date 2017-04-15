@@ -1,6 +1,20 @@
 angular.module('video-player')
+// .controller('videoListEntryController', function($scope) {
+   
+//  })
 .directive('videoListEntry', function() {
+
   return {
-    // TODO
+  	scope : {
+  		video: '<',
+  	},
+	restrict: 'E',
+  	controllerAs:'ctrl',
+  	bindToController:true,
+  	controller: function(){
+
+  	},
+    templateUrl: 'src/templates/videoListEntry.html',
+ 
   };
 });
