@@ -1,6 +1,4 @@
 <ul class="video-list" >
-  <li><video-list-entry ng-repeat="video in ctrl.videos" video="video"></video-list-entry></li>
+  <li><video-list-entry ng-repeat="video in ctrl.videos" video="video" on-click="ctrl.onClick"></video-list-entry></li>
 </ul>
-
-
-<!-- ng-controller="videoListController" -->
+<!-- onClick="ctrl.onClick()" -->

@@ -6,15 +6,19 @@ angular.module('video-player')
 
   return {
   	scope : {
-  		video: '<',
+      newVideo: '=',
+  		video: '=',
+      onClick: '='
   	},
 	restrict: 'E',
   	controllerAs:'ctrl',
   	bindToController:true,
   	controller: function(){
 
+ 
   	},
     templateUrl: 'src/templates/videoListEntry.html',
  
   };
 });
+5

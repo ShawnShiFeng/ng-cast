@@ -1,17 +1,21 @@
 angular.module('video-player')
 .controller('videoListController', function($scope) {
-   
+    
  })
 .directive('videoList', function() {
   return {
   	scope: {
-  		videos: '<',
+      newVideo: '=',
+  		videos: '=',
+      onClick: '<'
   	},
-
   	restrict: 'E',
   	controllerAs:'ctrl',
   	bindToController:true,
-  	controller: 'videoListController',
+  	controller: function() {
+    
+
+    },
     templateUrl: 'src/templates/videoList.html'
 
   };
