@@ -1,20 +1,17 @@
 angular.module('video-player')
-.controller('videoListController', function($scope) {
-  
-    
+.controller('searchController', function(youTube) {
+  this.result = (text) => {
+    youTube.search(text, this.searchResults);
+  }
  })
-
 .directive('search', function() {
   return {
   	scope: {
-  		result: '='
+      searchResults: '<'
   	},
-  	restrict: 'E',
   	controllerAs:'ctrl',
   	bindToController:true,
-  	controller: function() {
-      this.result = function(){};
-    },
+  	controller: "searchController",
     templateUrl: 'src/templates/search.html'
   };
 });
